@@ -26,8 +26,6 @@ Gem::Specification.new do |spec|
   spec.add_dependency "jquery-rails", ">= 3.0" 
   spec.add_dependency 'sass-rails', '~> 5.0'
   spec.add_dependency 'uglifier', '>= 1.3.0'
-  spec.add_dependency 'coffee-rails', '~> 4.1.0'
-  spec.add_dependency 'jquery-rails'
   spec.add_dependency 'turbolinks'
   spec.add_dependency 'jbuilder', '~> 2.0'
 end
