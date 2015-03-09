@@ -8,12 +8,13 @@ Gem::Specification.new do |spec|
   spec.version       = Yoyoyo::VERSION
   spec.authors       = ["vivek"]
   spec.email         = ["vivekonrails@gmail.com"]
-  spec.summary       = %q{Create  a post }
+  spec.summary       = %q{Create a post }
   spec.description   = %q{Sample gem for create a post}
   spec.homepage      = ""
   spec.license       = "MIT"
-
-  spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
+  spec.files         = `git ls-files`.split("\n")
+  spec.files         = Dir.glob("{bin,lib}/**/*")
+  # spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
   spec.bindir        = "exe"
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
