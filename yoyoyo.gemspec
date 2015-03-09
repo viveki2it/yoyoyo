@@ -18,7 +18,16 @@ Gem::Specification.new do |spec|
   spec.bindir        = "exe"
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
-
+  spec.add_dependency "rails", ">= 4.0"
   spec.add_development_dependency "bundler", "~> 1.8"
   spec.add_development_dependency "rake", "~> 10.0"
+  spec.add_dependency "sass-rails", ">= 4.0"
+  spec.add_dependency "coffee-rails", ">= 4.0"
+  spec.add_dependency "jquery-rails", ">= 3.0" 
+  spec.add_dependency 'sass-rails', '~> 5.0'
+  spec.add_dependency 'uglifier', '>= 1.3.0'
+  spec.add_dependency 'coffee-rails', '~> 4.1.0'
+  spec.add_dependency 'jquery-rails'
+  spec.add_dependency 'turbolinks'
+  spec.add_dependency 'jbuilder', '~> 2.0'
 end
