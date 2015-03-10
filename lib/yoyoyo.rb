@@ -1,5 +1,5 @@
 require "yoyoyo/version"
-
+require "yoyoyo/engine"
 module Yoyoyo
-  class Engine < Rails::Engine; end
+
 end
