@@ -22,7 +22,7 @@ module Yoyoyo
       # end
 
       def copy_migrations
-        template "db/migrate/20150309093349_create_posts.rb", "db/migrate/20150309093349_create_posts.rb"
+        template "db/migrate/20150309093349_create_yoyoyo_posts.rb", "db/migrate/20150309093349_create_yoyoyo_posts.rb"
       end
     end
   end

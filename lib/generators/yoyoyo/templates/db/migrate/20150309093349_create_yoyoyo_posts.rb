@@ -1,6 +1,6 @@
-class CreatePosts < ActiveRecord::Migration
+class CreateYoyoyoPosts < ActiveRecord::Migration
   def change
-    create_table :posts do |t|
+    create_table :yoyoyo_posts do |t|
       t.string :name
       t.string :title
       t.text :content
