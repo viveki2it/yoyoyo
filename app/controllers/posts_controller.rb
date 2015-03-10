@@ -1,4 +1,6 @@
-class Yoyoyo::PostsController < ApplicationController
+require_dependency "yoyoyo/application_controller"
+module Yoyoyo
+class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
   # GET /posts
@@ -71,4 +73,5 @@ class Yoyoyo::PostsController < ApplicationController
     def post_params
       params.require(:post).permit(:name, :title, :content)
     end
+end
 end
