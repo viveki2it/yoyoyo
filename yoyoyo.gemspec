@@ -3,6 +3,7 @@ lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'yoyoyo/version'
 
+
 Gem::Specification.new do |spec|
   spec.name          = "yoyoyo"
   spec.version       = Yoyoyo::VERSION
@@ -13,9 +14,11 @@ Gem::Specification.new do |spec|
   spec.homepage      = ""
   spec.license       = "MIT"
   spec.files         = `git ls-files`.split("\n")
-  spec.files         = Dir.glob("{bin,lib}/**/*")
+  spec.files = Dir["{app,config,db,lib}/**/*", "Rakefile"]
+
+  # spec.files         = Dir.glob("{bin,lib}/**/*")
   # spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
-  spec.bindir        = "exe"
+  # spec.bindir        = "exe"
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
   spec.add_dependency "rails", ">= 4.0"
